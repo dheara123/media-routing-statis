@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rangkuman | NetLearn</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <a class="logo" href="index.html">NetLearn</a>
+    <nav class="nav-links">
+        <a href="index.html">Beranda</a>
+        <a href="tujuan.html">Tujuan Pembelajaran</a>
+        <a href="materi.html">Materi</a>
+        <a href="refleksi.html">Refleksi</a>
+        <a href="rangkuman.html" class="active">Rangkuman</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-inner">
+        <span class="eyebrow">Review dan Penguatan</span>
+        <h1>Rangkuman Routing Statis</h1>
+        <p>
+            Gunakan rangkuman ini untuk mengingat kembali konsep inti
+            atau langsung kembali ke bagian yang ingin kamu pelajari.
+        </p>
+    </div>
+</section>
+
+<main class="container">
+    <section class="card">
+        <h2>1. Konsep Utama</h2>
+
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Konsep</th>
+                        <th>Ringkasan</th>
+                        <th>Pelajari Lagi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Alamat IP</td>
+                        <td>Alamat logis perangkat dalam jaringan IP.</td>
+                        <td><a href="materi.html#dasar">Buka dasar</a></td>
+                    </tr>
+                    <tr>
+                        <td>Subnet mask</td>
+                        <td>Menentukan bagian jaringan dan host dari alamat IP.</td>
+                        <td><a href="materi.html#dasar">Buka dasar</a></td>
+                    </tr>
+                    <tr>
+                        <td>Router</td>
+                        <td>Meneruskan paket antarjaringan berdasarkan informasi routing.</td>
+                        <td><a href="materi.html#topologi">Buka topologi</a></td>
+                    </tr>
+                    <tr>
+                        <td>Routing statis</td>
+                        <td>Rute dimasukkan secara manual oleh administrator.</td>
+                        <td><a href="materi.html#routing">Buka routing</a></td>
+                    </tr>
+                    <tr>
+                        <td>Next-hop</td>
+                        <td>Alamat router berikutnya untuk meneruskan paket.</td>
+                        <td><a href="materi.html#bantuan">Buka bantuan</a></td>
+                    </tr>
+                    <tr>
+                        <td>Pengujian konektivitas</td>
+                        <td>Memeriksa keterjangkauan perangkat dan jalur komunikasi.</td>
+                        <td><a href="materi.html#pengujian">Buka pengujian</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>2. Ingat Urutan Konfigurasi</h2>
+
+        <div class="path-list">
+            <div class="path-item">
+                <span class="number">1</span>
+                <div>
+                    <h3>Periksa alamat IP</h3>
+                    <p>Pastikan alamat IP dan subnet mask sesuai topologi.</p>
+                </div>
+            </div>
+
+            <div class="path-item">
+                <span class="number">2</span>
+                <div>
+                    <h3>Periksa koneksi antarrouter</h3>
+                    <p>Pastikan antarmuka dan jaringan penghubung berfungsi.</p>
+                </div>
+            </div>
+
+            <div class="path-item">
+                <span class="number">3</span>
+                <div>
+                    <h3>Tambahkan rute statis</h3>
+                    <p>Tentukan jaringan tujuan, subnet mask, dan next-hop.</p>
+                </div>
+            </div>
+
+            <div class="path-item">
+                <span class="number">4</span>
+                <div>
+                    <h3>Periksa jalur balik</h3>
+                    <p>Pastikan router tujuan memiliki jalur kembali jika diperlukan.</p>
+                </div>
+            </div>
+
+            <div class="path-item">
+                <span class="number">5</span>
+                <div>
+                    <h3>Lakukan pengujian</h3>
+                    <p>Periksa tabel routing dan uji konektivitas secara bertahap.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>3. Contoh Perintah</h2>
+
+        <p>Rute pada R1 menuju jaringan PC2:</p>
+        <pre>R1(config)# ip route 192.168.2.0 255.255.255.0 10.10.10.2</pre>
+
+        <p>Rute balik pada R2 menuju jaringan PC1:</p>
+        <pre>R2(config)# ip route 192.168.1.0 255.255.255.0 10.10.10.1</pre>
+
+        <p>Memeriksa tabel routing:</p>
+        <pre>show ip route</pre>
+
+        <p>Menguji konektivitas ke PC2:</p>
+        <pre>ping 192.168.2.10</pre>
+    </section>
+
+    <section class="card">
+        <h2>4. Pilih Bagian yang Ingin Kamu Ulangi</h2>
+
+        <div class="grid">
+            <a href="materi.html#dasar" class="choice-card">
+                <span class="number">1</span>
+                <h3>Konsep Dasar</h3>
+                <p>Untuk mengulang IP, subnet mask, dan gateway.</p>
+                <span class="card-link">Buka bagian →</span>
+            </a>
+
+            <a href="materi.html#routing" class="choice-card">
+                <span class="number">2</span>
+                <h3>Routing Statis</h3>
+                <p>Untuk mengulang perintah dan next-hop.</p>
+                <span class="card-link">Buka bagian →</span>
+            </a>
+
+            <a href="materi.html#troubleshooting" class="choice-card">
+                <span class="number">3</span>
+                <h3>Troubleshooting</h3>
+                <p>Untuk mengulang langkah pemecahan masalah.</p>
+                <span class="card-link">Buka bagian →</span>
+            </a>
+        </div>
+
+        <div class="info-box">
+            <strong>Langkah selanjutnya</strong>
+            <p>
+                Jika sudah memahami konsep-konsep tersebut, lanjutkan
+                ke kegiatan praktik sesuai arahan guru dan petunjuk
+                pada RPM.
+            </p>
+        </div>
+
+        <a href="refleksi.html" class="button">Isi Refleksi →</a>
+        <a href="index.html" class="button secondary">Kembali ke Beranda</a>
+    </section>
+</main>
+
+<footer class="footer">
+    © 2408581 - Dhea Rizki Amalia 2026 | NetLearn
+</footer>
+
+</body>
+</html>

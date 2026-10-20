@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refleksi | NetLearn</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <a class="logo" href="index.html">NetLearn</a>
+    <nav class="nav-links">
+        <a href="index.html">Beranda</a>
+        <a href="tujuan.html">Tujuan Pembelajaran</a>
+        <a href="materi.html">Materi</a>
+        <a href="refleksi.html" class="active">Refleksi</a>
+        <a href="rangkuman.html">Rangkuman</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-inner">
+        <span class="eyebrow">Kenali Kebutuhan Belajarmu</span>
+        <h1>Refleksi Pembelajaran</h1>
+        <p>
+            Tinjau kembali proses belajarmu. Tentukan konsep yang
+            sudah kamu pahami dan bagian yang perlu dipelajari kembali.
+        </p>
+    </div>
+</section>
+
+<main class="container">
+    <section class="card">
+        <h2>1. Tinjau Pemahamanmu</h2>
+        <p>
+            Baca setiap pernyataan berikut. Gunakan sebagai panduan
+            untuk menilai pemahamanmu sendiri, bukan sebagai nilai ujian.
+        </p>
+
+        <div class="path-list">
+            <div class="path-item">
+                <span class="number">1</span>
+                <div>
+                    <h3>Konsep dasar jaringan</h3>
+                    <p>
+                        Saya dapat menjelaskan alamat IP, subnet mask,
+                        network address, dan default gateway.
+                    </p>
+                    <a href="materi.html#dasar">Ulangi konsep dasar →</a>
+                </div>
+            </div>
+
+            <div class="path-item">
+                <span class="number">2</span>
+                <div>
+                    <h3>Analisis topologi</h3>
+                    <p>
+                        Saya dapat menentukan jaringan sumber,
+                        jaringan tujuan, dan hubungan antarrouter.
+                    </p>
+                    <a href="materi.html#topologi">Ulangi analisis topologi →</a>
+                </div>
+            </div>
+
+            <div class="path-item">
+                <span class="number">3</span>
+                <div>
+                    <h3>Routing statis</h3>
+                    <p>
+                        Saya dapat menjelaskan jaringan tujuan,
+                        subnet mask, dan next-hop pada perintah rute statis.
+                    </p>
+                    <a href="materi.html#routing">Ulangi routing statis →</a>
+                </div>
+            </div>
+
+            <div class="path-item">
+                <span class="number">4</span>
+                <div>
+                    <h3>Pengujian dan pemecahan masalah</h3>
+                    <p>
+                        Saya dapat menentukan langkah pemeriksaan
+                        ketika koneksi antarjaringan gagal.
+                    </p>
+                    <a href="materi.html#troubleshooting">Ulangi troubleshooting →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>2. Tuliskan Refleksimu</h2>
+        <p>
+            Jawab pertanyaan berikut dengan kalimatmu sendiri.
+            Kamu dapat menggunakan jawaban ini untuk berdiskusi
+            dengan guru.
+        </p>
+
+        <div class="reflection-question">
+            <label for="refleksi-1">
+                A. Konsep apa yang paling kamu pahami setelah belajar?
+            </label>
+            <textarea id="refleksi-1"
+                placeholder="Tuliskan konsep yang sudah kamu pahami..."></textarea>
+        </div>
+
+        <div class="reflection-question">
+            <label for="refleksi-2">
+                B. Konsep apa yang masih membuatmu bingung?
+            </label>
+            <textarea id="refleksi-2"
+                placeholder="Tuliskan bagian yang masih membingungkan..."></textarea>
+        </div>
+
+        <div class="reflection-question">
+            <label for="refleksi-3">
+                C. Apa yang akan kamu lakukan untuk memahami konsep tersebut?
+            </label>
+            <textarea id="refleksi-3"
+                placeholder="Misalnya membaca kembali penjelasan atau mengamati diagram..."></textarea>
+        </div>
+
+        <div class="reflection-question">
+            <label for="refleksi-4">
+                D. Bagaimana hubungan routing statis dengan komunikasi antarjaringan?
+            </label>
+            <textarea id="refleksi-4"
+                placeholder="Tuliskan penjelasanmu..."></textarea>
+        </div>
+
+        <div class="info-box">
+            <strong>Petunjuk:</strong>
+            <p>
+                Jika masih bingung tentang konsep dasar, kembali ke
+                bagian Dasar. Jika sudah memahami konsep tersebut,
+                lanjutkan ke Routing Statis atau Pengujian Konektivitas.
+            </p>
+        </div>
+
+        <button class="button" type="button" onclick="window.print()">
+            Cetak Refleksi
+        </button>
+        <a class="button secondary" href="materi.html#pilih-jalur">
+            Kembali Memilih Jalur
+        </a>
+    </section>
+
+    <section class="card">
+        <h2>3. Tentukan Langkah Belajarmu Berikutnya</h2>
+
+        <div class="grid two">
+            <a href="materi.html#dasar" class="choice-card">
+                <span class="number">A</span>
+                <h3>Ulangi Materi Dasar</h3>
+                <p>
+                    Pilih jika kamu masih perlu memahami alamat IP,
+                    subnet mask, dan default gateway.
+                </p>
+                <span class="card-link">Kembali ke Dasar →</span>
+            </a>
+
+            <a href="materi.html#routing" class="choice-card">
+                <span class="number">B</span>
+                <h3>Perkuat Materi Routing</h3>
+                <p>
+                    Pilih jika kamu ingin memperdalam rute statis,
+                    next-hop, dan jalur komunikasi.
+                </p>
+                <span class="card-link">Kembali ke Routing →</span>
+            </a>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    © 2408581 - Dhea Rizki Amalia 2026 | NetLearn
+</footer>
+
+</body>
+</html>

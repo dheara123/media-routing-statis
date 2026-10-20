@@ -1,0 +1,481 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materi Routing Statis | NetLearn</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <a class="logo" href="index.html">NetLearn</a>
+    <nav class="nav-links">
+        <a href="index.html">Beranda</a>
+        <a href="tujuan.html">Tujuan Pembelajaran</a>
+        <a href="materi.html" class="active">Materi</a>
+        <a href="refleksi.html">Refleksi</a>
+        <a href="rangkuman.html">Rangkuman</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-inner">
+        <span class="eyebrow">Adaptive Learning Path</span>
+        <h1>Materi Routing Statis</h1>
+        <p>
+            Pilih titik awal yang sesuai dengan pemahamanmu.
+            Kamu dapat kembali ke bagian sebelumnya kapan saja
+            jika menemukan konsep yang belum dipahami.
+        </p>
+        <a href="#pilih-jalur" class="button">Pilih Jalur Belajar ↓</a>
+    </div>
+</section>
+
+<main class="container">
+
+    <!-- PILIHAN JALUR BELAJAR -->
+    <section class="card" id="pilih-jalur">
+        <div class="section-heading">
+            <h2>Mulai dari Mana?</h2>
+            <p>Pilih salah satu jalur berikut sesuai kebutuhanmu.</p>
+        </div>
+
+        <div class="grid">
+            <a class="choice-card" href="#dasar">
+                <span class="number">A</span>
+                <h3>Jalur Dasar</h3>
+                <p>
+                    Untuk kamu yang ingin mengulang konsep alamat IP,
+                    subnet mask, router, dan default gateway.
+                </p>
+                <span class="card-link">Mulai dari Dasar →</span>
+            </a>
+
+            <a class="choice-card" href="#routing">
+                <span class="number">B</span>
+                <h3>Jalur Routing</h3>
+                <p>
+                    Untuk kamu yang sudah memahami dasar jaringan
+                    dan ingin langsung mempelajari routing statis.
+                </p>
+                <span class="card-link">Ke Materi Routing →</span>
+            </a>
+
+            <a class="choice-card" href="#bantuan">
+                <span class="number">C</span>
+                <h3>Jalur Penguatan</h3>
+                <p>
+                    Untuk kamu yang membutuhkan penjelasan tambahan
+                    mengenai istilah dan konsep tertentu.
+                </p>
+                <span class="card-link">Buka Bantuan →</span>
+            </a>
+        </div>
+
+        <div class="info-box">
+            <strong>Catatan:</strong>
+            <p>
+                Pilihan jalur ini membantumu menentukan titik awal belajar.
+                Website tidak mengukur kemampuanmu secara otomatis.
+            </p>
+        </div>
+    </section>
+
+    <!-- MATERI DASAR -->
+    <section class="card" id="dasar">
+        <span class="tag">Jalur A · Dasar</span>
+        <h2>1. Konsep Dasar Jaringan</h2>
+
+        <p>
+            Sebelum mempelajari routing statis, pahami terlebih dahulu
+            alamat IP, subnet mask, network address, router, dan
+            default gateway. Konsep ini membantu kamu menentukan
+            apakah dua perangkat berada pada jaringan yang sama
+            atau berbeda.
+        </p>
+
+        <h3>Alamat IP</h3>
+        <p>
+            Alamat IP merupakan alamat logis yang digunakan untuk
+            mengidentifikasi perangkat pada jaringan IP.
+            Contohnya adalah 192.168.1.10.
+        </p>
+
+        <h3>Subnet Mask</h3>
+        <p>
+            Subnet mask digunakan untuk menentukan bagian alamat IP
+            yang menunjukkan jaringan dan bagian yang menunjukkan host.
+            Contoh subnet mask /24 adalah 255.255.255.0.
+        </p>
+
+        <h3>Network Address</h3>
+        <p>
+            Network address mengidentifikasi suatu jaringan.
+            Dengan subnet mask /24, alamat IP 192.168.1.10 termasuk
+            dalam jaringan 192.168.1.0/24.
+        </p>
+
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Alamat IP</th>
+                        <th>Subnet Mask</th>
+                        <th>Jaringan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>192.168.1.10</td>
+                        <td>255.255.255.0</td>
+                        <td>192.168.1.0/24</td>
+                    </tr>
+                    <tr>
+                        <td>192.168.1.20</td>
+                        <td>255.255.255.0</td>
+                        <td>192.168.1.0/24</td>
+                    </tr>
+                    <tr>
+                        <td>192.168.2.10</td>
+                        <td>255.255.255.0</td>
+                        <td>192.168.2.0/24</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="info-box">
+            <strong>Perhatikan perbedaannya.</strong>
+            <p>
+                192.168.1.10/24 dan 192.168.1.20/24 berada pada jaringan
+                yang sama, sedangkan 192.168.2.10/24 berada pada jaringan
+                yang berbeda.
+            </p>
+        </div>
+
+        <h3>Router dan Default Gateway</h3>
+        <p>
+            Router meneruskan paket antarjaringan. Default gateway
+            merupakan alamat router yang digunakan perangkat untuk
+            mengirim paket menuju jaringan di luar jaringan lokalnya.
+        </p>
+
+        <a class="button" href="#topologi">Lanjut ke Topologi →</a>
+    </section>
+
+    <!-- ANALISIS TOPOLOGI -->
+    <section class="card" id="topologi">
+        <span class="tag">Penghubung Konsep</span>
+        <h2>2. Analisis Topologi Jaringan</h2>
+
+        <p>
+            Perhatikan contoh jaringan berikut. PC1 dan PC2 berada
+            pada jaringan yang berbeda dan dihubungkan oleh R1 serta R2.
+        </p>
+
+        <div class="topology">
+            <div class="device">
+                <strong>PC1</strong>
+                <small>192.168.1.10/24</small>
+                <small>Gateway: 192.168.1.1</small>
+            </div>
+
+            <span class="arrow">↔</span>
+
+            <div class="device">
+                <strong>Router R1</strong>
+                <small>LAN: 192.168.1.1</small>
+                <small>Link: 10.10.10.1/30</small>
+            </div>
+
+            <span class="arrow">↔</span>
+
+            <div class="device">
+                <strong>Router R2</strong>
+                <small>Link: 10.10.10.2/30</small>
+                <small>LAN: 192.168.2.1</small>
+            </div>
+
+            <span class="arrow">↔</span>
+
+            <div class="device">
+                <strong>PC2</strong>
+                <small>192.168.2.10/24</small>
+                <small>Gateway: 192.168.2.1</small>
+            </div>
+        </div>
+
+        <h3>Informasi Jaringan</h3>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Perangkat</th>
+                        <th>Alamat IP</th>
+                        <th>Fungsi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>PC1</td>
+                        <td>192.168.1.10/24</td>
+                        <td>Perangkat sumber</td>
+                    </tr>
+                    <tr>
+                        <td>R1</td>
+                        <td>192.168.1.1 dan 10.10.10.1/30</td>
+                        <td>Meneruskan paket dari LAN 1 ke jaringan berikutnya</td>
+                    </tr>
+                    <tr>
+                        <td>R2</td>
+                        <td>10.10.10.2/30 dan 192.168.2.1</td>
+                        <td>Meneruskan paket menuju LAN 2</td>
+                    </tr>
+                    <tr>
+                        <td>PC2</td>
+                        <td>192.168.2.10/24</td>
+                        <td>Perangkat tujuan</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="info-box">
+            <strong>Panduan analisis</strong>
+            <p>
+                Untuk memahami topologi, identifikasi jaringan sumber,
+                jaringan tujuan, router yang dilewati, dan alamat
+                next-hop yang digunakan.
+            </p>
+        </div>
+
+        <a class="button" href="#routing">Pelajari Routing Statis →</a>
+    </section>
+
+    <!-- ROUTING STATIS -->
+    <section class="card" id="routing">
+        <span class="tag">Jalur B · Routing</span>
+        <h2>3. Pengertian Routing Statis</h2>
+
+        <p>
+            Routing statis adalah metode routing ketika administrator
+            memasukkan jalur menuju jaringan tujuan secara manual
+            ke dalam router. Router menggunakan informasi tersebut
+            untuk meneruskan paket ke jaringan yang dituju.
+        </p>
+
+        <h3>Karakteristik Routing Statis</h3>
+        <ul>
+            <li>Rute ditentukan dan dimasukkan secara manual.</li>
+            <li>Administrator menentukan jaringan tujuan dan next-hop.</li>
+            <li>Perubahan rute perlu disesuaikan secara manual.</li>
+            <li>Konfigurasinya relatif sederhana untuk jaringan kecil.</li>
+        </ul>
+
+        <h3>Komponen Perintah Routing Statis</h3>
+        <pre>ip route [jaringan-tujuan] [subnet-mask] [next-hop]</pre>
+
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Komponen</th>
+                        <th>Penjelasan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Jaringan tujuan</td>
+                        <td>Jaringan yang ingin dicapai oleh paket.</td>
+                    </tr>
+                    <tr>
+                        <td>Subnet mask</td>
+                        <td>Menentukan cakupan jaringan tujuan.</td>
+                    </tr>
+                    <tr>
+                        <td>Next-hop</td>
+                        <td>Alamat router berikutnya yang menjadi tujuan penerusan paket.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>Contoh Konfigurasi R1</h3>
+        <p>
+            R1 perlu mengetahui jalur menuju jaringan PC2,
+            yaitu 192.168.2.0/24, melalui R2 yang beralamat 10.10.10.2.
+        </p>
+        <pre>R1(config)# ip route 192.168.2.0 255.255.255.0 10.10.10.2</pre>
+
+        <h3>Contoh Konfigurasi R2</h3>
+        <p>
+            R2 perlu mengetahui jalur kembali menuju jaringan PC1,
+            yaitu 192.168.1.0/24, melalui R1 yang beralamat 10.10.10.1.
+        </p>
+        <pre>R2(config)# ip route 192.168.1.0 255.255.255.0 10.10.10.1</pre>
+
+        <div class="warning-box">
+            <strong>Ingat:</strong>
+            <p>
+                Jalur pergi dan jalur kembali harus diperhatikan.
+                Konfigurasi rute statis saja tidak menjamin komunikasi
+                berhasil jika alamat IP, gateway, atau koneksi
+                antarrouter belum benar.
+            </p>
+        </div>
+    </section>
+
+    <!-- PENGUJIAN -->
+    <section class="card" id="pengujian">
+        <h2>4. Pengujian Konektivitas</h2>
+
+        <p>
+            Setelah konfigurasi dilakukan, periksa tabel routing
+            dan uji keterjangkauan perangkat.
+        </p>
+
+        <h3>Memeriksa Tabel Routing</h3>
+        <pre>R1# show ip route
+R2# show ip route</pre>
+
+        <h3>Menguji Koneksi</h3>
+        <pre>ping 192.168.1.1
+ping 10.10.10.2
+ping 192.168.2.10</pre>
+
+        <p>
+            Pengujian dilakukan bertahap, dari gateway lokal,
+            router tetangga, hingga perangkat tujuan.
+        </p>
+
+        <div class="info-box">
+            <strong>Jika ping gagal</strong>
+            <p>
+                Periksa alamat IP, subnet mask, default gateway,
+                status antarmuka, koneksi antarrouter, serta tabel routing.
+                Pertimbangkan juga kemungkinan adanya pembatasan ICMP.
+            </p>
+        </div>
+    </section>
+
+    <!-- TROUBLESHOOTING -->
+    <section class="card" id="troubleshooting">
+        <h2>5. Pemecahan Masalah Jaringan</h2>
+
+        <p>
+            Gunakan urutan pemeriksaan yang terstruktur agar kamu
+            dapat menelusuri kemungkinan penyebab gangguan.
+        </p>
+
+        <div class="path-list">
+            <div class="path-item">
+                <span class="number">1</span>
+                <div>
+                    <h3>Identifikasi gejala</h3>
+                    <p>Catat perangkat mana yang tidak dapat berkomunikasi.</p>
+                </div>
+            </div>
+
+            <div class="path-item">
+                <span class="number">2</span>
+                <div>
+                    <h3>Periksa konfigurasi dasar</h3>
+                    <p>Periksa alamat IP, subnet mask, gateway, dan status antarmuka.</p>
+                </div>
+            </div>
+
+            <div class="path-item">
+                <span class="number">3</span>
+                <div>
+                    <h3>Periksa jalur routing</h3>
+                    <p>Pastikan jaringan tujuan dan next-hop sesuai dengan topologi.</p>
+                </div>
+            </div>
+
+            <div class="path-item">
+                <span class="number">4</span>
+                <div>
+                    <h3>Uji kembali</h3>
+                    <p>Gunakan ping dan periksa apakah komunikasi sudah berhasil.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BANTUAN -->
+    <section class="card" id="bantuan">
+        <span class="tag">Jalur C · Penguatan</span>
+        <h2>6. Bantuan Istilah</h2>
+
+        <p>
+            Buka istilah yang ingin kamu pahami kembali.
+            Kamu tidak harus membuka semuanya.
+        </p>
+
+        <details>
+            <summary>Apa itu network address?</summary>
+            <p>
+                Network address merupakan alamat yang mengidentifikasi
+                suatu jaringan, misalnya 192.168.1.0/24.
+            </p>
+        </details>
+
+        <details>
+            <summary>Apa itu next-hop?</summary>
+            <p>
+                Next-hop merupakan alamat router berikutnya yang
+                digunakan untuk meneruskan paket menuju jaringan tujuan.
+            </p>
+        </details>
+
+        <details>
+            <summary>Apa itu default gateway?</summary>
+            <p>
+                Default gateway adalah alamat router yang digunakan
+                perangkat untuk mengirim paket menuju jaringan di luar
+                jaringan lokalnya.
+            </p>
+        </details>
+
+        <details>
+            <summary>Apa perbedaan routing statis dan dinamis?</summary>
+            <p>
+                Pada routing statis, rute dimasukkan secara manual.
+                Pada routing dinamis, router menggunakan protokol routing
+                untuk mempelajari dan memperbarui informasi rute sesuai
+                mekanisme protokol yang digunakan.
+            </p>
+        </details>
+
+        <details>
+            <summary>Mengapa diperlukan rute balik?</summary>
+            <p>
+                Komunikasi dua arah memerlukan jalur untuk paket pergi
+                dan paket balasan. Jika jalur kembali tidak tersedia,
+                komunikasi dapat gagal meskipun paket pergi berhasil.
+            </p>
+        </details>
+
+        <div class="success-box">
+            <strong>Sudah lebih paham?</strong>
+            <p>
+                Kembali ke topologi atau contoh konfigurasi, lalu
+                periksa apakah kamu dapat menjelaskan fungsi setiap
+                alamat dan jalur yang digunakan.
+            </p>
+        </div>
+
+        <a class="button" href="refleksi.html">Lanjut ke Refleksi →</a>
+        <a class="button secondary" href="rangkuman.html">Buka Rangkuman</a>
+    </section>
+
+</main>
+
+<footer class="footer">
+    © 2408581 - Dhea Rizki Amalia 2026 | NetLearn
+</footer>
+
+</body>
+</html>
